@@ -6,7 +6,7 @@ import { GeoSearchProvided } from "react-instantsearch-core";
 import { connectGeoSearch } from "react-instantsearch-dom";
 
 import { Map } from "mapbox-gl";
-import { LngLat } from "../../../types/LngLat";
+import { LngLat } from "../../types/LngLat";
 
 import { ReactComponent as MarkerUnselected } from "../../assets/marker.svg";
 import { ReactComponent as MarkerSelected } from "../../assets/marker-selected.svg";
@@ -56,8 +56,13 @@ class MapComponent extends Component<GeoSearchProvided & MapProps, MapState> {
 
     if (hits.length && hits !== this.props.hits) {
       const markers: LngLat[] = hits.map(
-        ({ _geoloc }: { _geoloc: { lat: number; lng: number } }) => {
-          return [_geoloc.lng, _geoloc.lat];
+        ({
+          geometry: { coordinates },
+        }: {
+          geometry: { coordinates: LngLat };
+        }) => {
+          // ({ _geoloc }: { _geoloc: { lat: number; lng: number } }) => {
+          return [coordinates[0], coordinates[1]];
         }
       );
       this.setState({ markers }, () => {

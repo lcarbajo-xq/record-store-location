@@ -1,6 +1,6 @@
 import { ReactComponent as ShopCenter } from "../../assets/shop-center.svg";
 import React, { useEffect, useState } from "react";
-import { GeoHit } from "../../../types/StoreHit";
+import { GeoHit } from "../../types/StoreHit";
 
 // Declaración del componente Record Store de tipo JSX.Element
 

@@ -12,7 +12,7 @@ import RecordStore from "./Components/RecordStore/RecordStore";
 import Map from "./Components/Map/Map";
 import { indexName, searchClient } from "./lib/algoliaSeatch";
 import { useState } from "react";
-import { GeoHit } from "../types/StoreHit";
+import { GeoHit } from "./types/StoreHit";
 
 function App() {
   const [currentStore, setCurrentStore] = useState<GeoHit | null>(null);
@@ -25,7 +25,7 @@ function App() {
         <Configure aroundLatLngViaIP={true} />
         <div className={"flex h-full w-full"}>
           <div className={"flex flex-col w-1/4"}>
-            <div>
+            <div className="m-2">
               <RefinementList attribute={"fields.countrycode"} />
             </div>
 
