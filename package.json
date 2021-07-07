@@ -12,7 +12,6 @@
     "@types/react-dom": "^17.0.8",
     "algoliasearch": "^4.10.3",
     "instantsearch.js": "^4.25.0",
-    "mapbox-gl": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-instantsearch-dom": "^6.12.0",
@@ -50,8 +49,10 @@
   "devDependencies": {
     "@craco/craco": "^6.2.0",
     "@tailwindcss/forms": "^0.3.3",
+    "@types/mapbox-gl": "^2.3.2",
     "@types/react-instantsearch": "^6.10.0",
     "autoprefixer": "9.8.6",
+    "mapbox-gl": "^2.3.1",
     "postcss": "7.0.33",
     "serve": "^12.0.0"
   }

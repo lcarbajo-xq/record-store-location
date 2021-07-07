@@ -1,8 +1,19 @@
 export type GeoHit = {
-   fields:{ name: string};
+  fields?: {
+    name: string;
+    hasclosed: string;
+    countrycode: string;
     city: string;
-    country: string;
-    services: string[];
-    objectID: string
-    _geoloc: { lat: number; lng: number };
+    geoloc: Array<number>;
+    state: string;
+    lat: string;
+    lng: string;
+    supporter: number;
+    placeidh: string;
   };
+  objectID: string;
+  _geoloc: { lat: string; lng: string };
+  geometry: {
+    coordinates: [number, number];
+  };
+};
